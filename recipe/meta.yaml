@@ -10,9 +10,8 @@ source:
   sha256: 3196e52908d8a2439d732dc49f4d3f0ae9c5993be23622ccedd152b1671be802
 
 build:
-  # numba 0.56.4 does not support for py<3.7 and py>310
-  skip: true  # [(py<37 or py>310) or s390x]
-  number: 0
+  skip: true  # [py<37 or s390x]
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed -vvv
 
